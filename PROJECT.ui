@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>788</width>
-    <height>857</height>
+    <width>790</width>
+    <height>859</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,18 +18,22 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>790</width>
+    <height>859</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
-    <height>16777215</height>
+    <width>790</width>
+    <height>859</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>winico.png</normaloff>winico.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="enabled">
@@ -57,7 +61,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Main">
        <attribute name="title">
@@ -110,7 +114,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="niga">
+       <widget class="QLabel" name="img_show">
         <property name="geometry">
          <rect>
           <x>350</x>
@@ -121,9 +125,6 @@
         </property>
         <property name="text">
          <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>../../../../../Desktop/2836943_detail.jpg</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -323,7 +324,7 @@
        </widget>
        <zorder>listView</zorder>
        <zorder>description</zorder>
-       <zorder>niga</zorder>
+       <zorder>img_show</zorder>
        <zorder>zaklad</zorder>
        <zorder>spisok</zorder>
        <zorder>groupBox</zorder>
@@ -353,7 +354,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="nigg_2">
+       <widget class="QLabel" name="img_show2">
         <property name="geometry">
          <rect>
           <x>310</x>
@@ -414,6 +415,55 @@
        <attribute name="title">
         <string>DB</string>
        </attribute>
+       <widget class="QTableWidget" name="dbtable">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>751</width>
+          <height>341</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="save_changes">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>360</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сохранить изменения</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="del_but">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>390</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Удалить строку</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="add_book">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>360</y>
+          <width>179</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Добавить книгу</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -424,7 +474,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>788</width>
+     <width>790</width>
      <height>21</height>
     </rect>
    </property>
