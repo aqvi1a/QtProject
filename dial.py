@@ -18,7 +18,7 @@ class Ui_Dialog(object):
         Dialog.setMinimumSize(QtCore.QSize(471, 390))
         Dialog.setMaximumSize(QtCore.QSize(471, 390))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("winico.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("icons/winico.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
         self.confirm = QtWidgets.QPushButton(Dialog)
         self.confirm.setGeometry(QtCore.QRect(310, 350, 75, 23))

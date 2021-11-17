@@ -33,7 +33,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>winico.png</normaloff>winico.png</iconset>
+    <normaloff>icons/winico.png</normaloff>icons/winico.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="enabled">
@@ -147,7 +147,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>non_fav.png</normaloff>non_fav.png</iconset>
+          <normaloff>icons/non_fav.png</normaloff>icons/non_fav.png</iconset>
         </property>
        </widget>
        <widget class="QListWidget" name="spisok">
@@ -296,7 +296,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>but.png</normaloff>but.png</iconset>
+           <normaloff>icons/but.png</normaloff>icons/but.png</iconset>
          </property>
         </widget>
         <widget class="QWidget" name="layoutWidget">

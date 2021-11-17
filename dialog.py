@@ -66,6 +66,7 @@ class Dialog(QtWidgets.QDialog, Ui_Dialog):
                 con.commit()
                 with shelve.open('nigi') as kni:
                     g = self.genres.toPlainText().split(', ')
+                    g = list(map(lambda x: x.capitalize(), g))
                     kni[key] = g
                 self.close()
 
