@@ -41,7 +41,7 @@ class MainW(QMainWindow):
                     self.dbtable.item(i, j).setFlags(QtCore.Qt.ItemIsEnabled)
         self.db_change_dict = {}
         self.podbor.clicked.connect(self.filtr)
-        self.lupa.clicked.connect(self.pupa)
+        self.lupa.clicked.connect(self.search)
         self.spisok.currentItemChanged.connect(self.lis)
         self.spisok_fav.currentItemChanged.connect(self.lis_fav)
         self.zaklad.clicked.connect(self.fav)
@@ -64,7 +64,7 @@ class MainW(QMainWindow):
         self.db_change_dict = {}
         self.smth()
 
-    def smth(self):
+    def refill(self):
         con = sqlite3.connect('books.db')
         self.cur = con.cursor()
         self.country.clear(), self.autor.clear(), self.genre.clear()
@@ -138,7 +138,7 @@ class MainW(QMainWindow):
                 for ele in genr_k:
                     self.spisok.addItem(f'{ele[0]}, {ele[1]}')
 
-    def pupa(self):  # функция подбора по поисковой строке
+    def search(self):  # функция подбора по поисковой строке
         n = self.stroka.text().capitalize()
         c = self.cur.execute(f'''SELECT img, desc FROM Library
         WHERE name = "{n}"''').fetchall()
@@ -219,7 +219,7 @@ class MainW(QMainWindow):
                 new = user_to_db[val[0]]
                 cur.execute(f'''UPDATE Library SET {new}=\"{val[1]}\" WHERE id={el}''')
                 con.commit()
-        self.smth()
+        self.refill()
 
     def add(self):
         dia = Dialog()
@@ -246,7 +246,7 @@ class MainW(QMainWindow):
         os.remove(f'{p_imag}/{genr}.jpg')
         os.remove(f'{p_desc}/{genr}.txt')
         con.commit()
-        self.smth()
+        self.refill()
         self.spisok_fav.clear()
         self.favourite = self.cur.execute(f'''SELECT title FROM Favourite''').fetchall()
         for i in self.favourite:
